@@ -1,0 +1,61 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
+.help-block {
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-content {
+    text-align: left;
+    bottom: 0%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    background: white;
+    height: 5%;
+    line-height: 5%;
+    width: inherit;
+}
+
+.app-container {
+    background: #c7c7c71a;
+    width: 50%;
+    height: 50%;
+}
+
+.jumbotron {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.footer-box {
+    line-height: 35px;
+    text-align: center;
+}
+
+.text-header {
+    text-align: center;
+}
+
+.text-label {
+    text-align: center;
+}
+
+.link-logout {
+    right: 0px;
+    position: absolute;
+}
+
+.homepage-content {
+    display: inline-flex;
+}
