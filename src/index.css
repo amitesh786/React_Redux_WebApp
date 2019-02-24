@@ -59,3 +59,9 @@ a {
 .homepage-content {
     display: inline-flex;
 }
+
+.form-login-input {
+    width: 50%;
+    left: 25%;
+    position: relative;
+}

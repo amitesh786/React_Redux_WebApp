@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
+// Custom create dev
 import { store } from './helpers';
 import { App } from './App';
 
