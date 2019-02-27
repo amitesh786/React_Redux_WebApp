@@ -16,6 +16,19 @@ class HomePage extends React.Component {
 
     render() {
         const { user, users } = this.props;
+        const userItems = [];       
+
+        if (users.items && (users.items.length > 0) ) {
+            for(let i=0; i<users.items.length; i++) {
+
+                if(user.firstName === 'Admin' && user.lastName === 'Admin') {
+                    if (users.items[i].firstName != 'Admin') { userItems.push(users.items[i]);}
+                    else {continue;}
+                }else if ((user.firstName === users.items[i].firstName) && (user.lastName === users.items[i].lastName)) {
+                    userItems.push(users.items[i]);
+                }
+            }
+        }
 
         return (
             <div className="col-md-12 col-md-offset-1 homepage-content">
@@ -29,9 +42,9 @@ class HomePage extends React.Component {
                     {users.loading && <em>Loading users...</em>}
                     {users.error && <span className="text-danger">ERROR: {users.error}</span>}
 
-                    {users.items &&
+                    {userItems &&
                         <ul>
-                            {users.items.map((user, index) =>
+                            {userItems.map((user, index) =>
                                 <li key={user.id}>
                                     {user.firstName + ' ' + user.lastName}
                                     {
