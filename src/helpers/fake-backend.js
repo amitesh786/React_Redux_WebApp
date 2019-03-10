@@ -69,7 +69,6 @@ export function configureFakeBackend() {
                         // Respond 200 OK with user
                         resolve({ ok: true, text: () => JSON.stringify(user) });
                     } else {
-
                         // Return 401 not authorised if token is null or invalid
                         reject('Unauthorised');
                     }

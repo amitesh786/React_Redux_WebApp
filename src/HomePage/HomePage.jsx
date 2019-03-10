@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 import { userActions } from '../actions';
 
 class HomePage extends React.Component {
-
+    
     componentDidMount() {
         this.props.dispatch(userActions.getAll());
     }
@@ -20,7 +19,6 @@ class HomePage extends React.Component {
 
         if (users.items && (users.items.length > 0) ) {
             for(let i=0; i<users.items.length; i++) {
-
                 if(user.firstName === 'Admin' && user.lastName === 'Admin') {
                     if (users.items[i].firstName != 'Admin') { userItems.push(users.items[i]);}
                     else {continue;}
